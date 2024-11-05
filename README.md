@@ -326,3 +326,35 @@ Quarterly breakdown for 2023-2024:
 
    
 <img width="474" alt="Customer Data Power BI" src="https://github.com/user-attachments/assets/136d36be-ee4f-48ad-9bc0-88c3bbe58976">
+
+
+## Summary of the Customer Data Set
+
+The comprehensive analysis of the customer subscription and sales data provides a detailed understanding of LITA's business performance and customer dynamics.
+
+### Key Takeaways:
+
+1. **Customer Base and Retention**:
+   - The company has a substantial customer base of 75,000 subscribers.
+   - However, the churn rate is relatively high, with 41,250 active subscribers and 33,750 canceled subscriptions.
+   - Identifying and addressing the factors leading to early subscription cancellations (within 6 months) could help improve customer retention.
+
+2. **Subscription Type Performance**:
+   - Basic subscriptions generate the highest revenue, accounting for 75M out of the 150M total revenue.
+   - Premium and Standard tiers contribute equally at around 37-38M in revenue each.
+   - Understanding the drivers behind the popularity of Basic subscriptions can inform pricing and packaging strategies.
+
+3. **Regional Analysis**:
+   - Revenue is consistently distributed across the four regions (East, North, South, West), suggesting successful market penetration.
+   - The regional distribution of subscription types is also balanced, indicating a cohesive go-to-market strategy.
+   - Monitoring any regional shifts in performance or customer preferences can help refine targeted sales and marketing efforts.
+
+4. **Revenue Trends**:
+   - The average quarterly revenue has remained relatively stable over the past 2 years, ranging from 1.99M to 2.01M.
+   - Identifying any seasonal or cyclical patterns in revenue can assist with financial forecasting and planning.
+
+5. **Long-Term Customer Value**:
+   - The analysis of customers with subscriptions longer than 12 months provides insights into LITA's loyal user base.
+   - Understanding the characteristics and behaviors of these long-term customers can inform strategies to acquire and retain similar high-value subscribers.
+
+Overall, the data-driven insights from this analysis can empower LITA to make informed decisions, optimize its subscription offerings, enhance customer retention, and drive sustainable business growth.
