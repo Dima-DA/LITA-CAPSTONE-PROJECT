@@ -225,15 +225,104 @@ GROUP BY CANCELED
 6. NULL handling with CASE statements
 7. Date manipulation functions
 
-## Technical Considerations
-- Proper handling of NULL values in SUBSCRIPTIONEND
-- Use of DATEDIFF for accurate duration calculations
-- Consistent use of WHERE clauses for filtering
-- Proper grouping for aggregation analysis
 
-## Business Impact
-1. Customer Segmentation Insights
-2. Churn Analysis Capabilities
-3. Revenue Pattern Recognition
-4. Geographic Performance Metrics
-5. Subscription Type Effectiveness
+
+## Power BI Dashboard Overview
+The "LITA CUSTOMER SALES DASHBOARD" presents a comprehensive view of customer subscription data with multiple interactive visualizations and key metrics.
+
+## Key Components Analysis
+
+### 1. Revenue Distribution by Region (Pie Chart)
+- Total Revenue: ~150M
+- Even distribution across regions:
+  * South: 38M (25.07%)
+  * West: 37M (24.94%)
+  * East: 37M (24.90%)
+  * North: 37M (25.09%)
+
+### 2. Top Performing Subscription Types (Bar Chart)
+Revenue by subscription tier:
+- Basic: 75M (highest performer)
+- Premium: 38M
+- Standard: 37M
+
+### 3. Key Metrics Cards
+- Total Number of Subscribers: 75K
+- Subscription Status:
+  * Active (FALSE): 41,250 subscribers
+  * Canceled (TRUE): 33,750 subscribers
+- Total Revenue: 150M
+
+### 4. Average Revenue by Year (Table)
+Quarterly breakdown for 2023-2024:
+```
+2023:
+- Q1: 2002.27
+- Q2: 2000.28
+- Q3: 1991.92
+- Q4: 1996.91
+
+2024:
+- Q1: 1985.36
+- Q2: 2005.11
+- Q3: 2003.20
+```
+
+### 5. Revenue by Subscription Type and Region (Stacked Bar Chart)
+- Shows distribution of subscription types across regions
+- 100% stacked visualization for proportional comparison
+- Clear segmentation between Basic, Premium, and Standard subscriptions
+
+## Interactive Elements
+1. Region Filter:
+   - East
+   - North
+   - South
+   - West
+
+2. Subscription Type Filter:
+   - Basic
+   - Premium
+   - Standard
+
+## Dashboard Design Elements
+1. Color Coding:
+   - Consistent color scheme for regions
+   - Distinct colors for subscription types
+   - Highlighted metrics in separate cards
+
+2. Layout:
+   - Clean grid arrangement
+   - Clear visual hierarchy
+   - Effective use of white space
+
+## Key Business Insights
+1. Customer Base:
+   - 75,000 total subscribers
+   - 55% retention rate (41,250 active vs 33,750 canceled)
+
+2. Revenue Performance:
+   - 150M total revenue
+   - Basic subscription is the strongest performer
+   - Even regional distribution suggests successful market penetration
+
+3. Subscription Patterns:
+   - Basic type dominates revenue generation
+   - Premium and Standard types show similar performance
+   - Consistent regional distribution across subscription types
+
+## Technical Implementation
+1. Visualizations Used:
+   - Pie chart for regional distribution
+   - Bar charts for subscription performance
+   - Stacked bar chart for detailed breakdown
+   - Cards for key metrics
+   - Table for time series data
+
+2. Interactivity:
+   - Synchronized filtering
+   - Cross-filtering capabilities
+   - Dynamic updates across all visuals
+
+   
+<img width="474" alt="Customer Data Power BI" src="https://github.com/user-attachments/assets/136d36be-ee4f-48ad-9bc0-88c3bbe58976">
