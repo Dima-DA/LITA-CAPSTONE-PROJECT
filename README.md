@@ -311,22 +311,44 @@ Quarterly breakdown for 2023-2024:
    - Premium and Standard types show similar performance
    - Consistent regional distribution across subscription types
 
-## Technical Implementation
-1. Visualizations Used:
+## Visualizations Used:
    - Pie chart for regional distribution
    - Bar charts for subscription performance
    - Stacked bar chart for detailed breakdown
    - Cards for key metrics
    - Table for time series data
 
-2. Interactivity:
-   - Synchronized filtering
-   - Cross-filtering capabilities
-   - Dynamic updates across all visuals
-
    
 <img width="474" alt="Customer Data Power BI" src="https://github.com/user-attachments/assets/136d36be-ee4f-48ad-9bc0-88c3bbe58976">
 
+## Sales Data Analysis- Excel
+
+### 1. Data Exploration
+- Examined the data structure and columns: Product, Sum of SALES, Sales by Quarter, and Region by Sales
+- Verified the completeness and accuracy of the data
+
+### 2. Sales by Product Analysis
+- Created a bar chart to visualize the sales by product
+- Key insights:
+  - Shoes is the highest selling product, generating over 3M in sales
+  - Gloves and Hat are the next best-selling products, contributing around 2M each
+  - Shirt, Socks, and Jacket have lower sales in comparison
+
+### 3. Sales by Quarter Analysis
+- Constructed a line chart to analyze the quarterly sales trends
+- Key insights:
+  - Sales have been relatively stable over the past 6 quarters, ranging from 65K to 90K
+  - Q1 and Q3 tend to have the highest sales, while Q2 and Q4 have slightly lower sales
+  - This suggests potential seasonality in the sales patterns
+
+### 4. Sales by Region Analysis
+- Utilized a pie chart to understand the regional sales distribution
+- Key insights:
+  - Sales are evenly distributed across the four regions (East, North, South, West)
+  - Each region contributes around 25% of the total sales
+  - This indicates a balanced regional sales strategy and successful market penetration
+ 
+    <img width="285" alt="Sales data excel" src="https://github.com/user-attachments/assets/c9d9a04a-1f3f-40d1-9a6a-26a82df25cad">
 
 ## Summary of the Customer Data Set
 
