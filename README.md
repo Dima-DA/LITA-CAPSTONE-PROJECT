@@ -118,3 +118,122 @@ This project aims to:
    - Combination charts for trend analysis
 
 <img width="354" alt="Excel CUSTOMER DATA" src="https://github.com/user-attachments/assets/c36c2206-125a-4f55-b90d-1255b762ce70">
+
+# SQL Analysis Documentation: Customer Data
+
+## 1. Data Importation and Exploration
+```sql
+-- Converted Excel file to csv and imported into SQL
+-- Initial data exploration
+SELECT * FROM [dbo].[ProjectCustomerData]
+```
+**Purpose**: Initial examination of all customer data fields and records
+
+## 2. Regional Customer Distribution
+```sql
+SELECT REGION, COUNT(CustomerID) AS CUSTOMER_BY_REGION 
+FROM [dbo].[ProjectCustomerData] 
+GROUP BY REGION
+```
+**Purpose**: Analyze customer distribution across regions
+**Key Insight**: Shows regional market penetration and customer concentration
+
+## 3. Most Popular Subscription Type
+```sql
+SELECT TOP(1) SUBSCRIPTIONTYPE, COUNT(CustomerID) AS TOP_SUB_TYPE  
+FROM [dbo].[ProjectCustomerData] 
+GROUP BY SUBSCRIPTIONTYPE
+```
+**Purpose**: Identify the most preferred subscription plan
+**Business Value**: Helps in understanding customer preferences and pricing strategy effectiveness
+
+## 4. Early Subscription Cancellations
+```sql
+SELECT COUNT(CustomerID) AS CANCELED_SUB  
+FROM [dbo].[ProjectCustomerData] 
+WHERE CANCELED = 0 
+AND DATEDIFF(MONTH, SUBSCRIPTIONSTART, SUBSCRIPTIONEND) <= 6
+```
+**Purpose**: Identify early churn rate (cancellations within 6 months)
+**Risk Analysis**: Helps identify potential issues with customer satisfaction or onboarding
+
+## 5. Average Subscription Duration
+```sql
+SELECT AVG(DATEDIFF(MONTH, SUBSCRIPTIONSTART, 
+    CASE 
+        WHEN SUBSCRIPTIONEND IS NULL THEN GETDATE()
+        ELSE SUBSCRIPTIONEND
+    END)) AS ASVSUB
+FROM [dbo].[ProjectCustomerData]
+```
+**Purpose**: Calculate average customer lifetime
+**Technical Note**: Uses CASE statement to handle active subscriptions
+
+## 6. Long-Term Customer Analysis
+```sql
+SELECT CUSTOMERID, CUSTOMERNAME, SUBSCRIPTIONTYPE 
+FROM [dbo].[ProjectCustomerData]
+WHERE DATEDIFF(MONTH, SUBSCRIPTIONSTART, 
+    CASE 
+        WHEN SUBSCRIPTIONEND IS NULL THEN GETDATE()
+        ELSE SUBSCRIPTIONEND
+    END) > 12
+```
+**Purpose**: Identify loyal customers (>12 months subscription)
+**Business Value**: Helps in understanding characteristics of long-term customers
+
+## 7. Revenue Analysis by Subscription
+```sql
+SELECT SUM(REVENUE) AS REV_BY_SUBTYPE 
+FROM [dbo].[ProjectCustomerData]
+GROUP BY SUBSCRIPTIONTYPE
+```
+**Purpose**: Analyze revenue contribution by subscription type
+**Financial Impact**: Helps in revenue forecasting and pricing strategy
+
+## 8. Top Cancellation Regions
+```sql
+SELECT TOP(3) REGION, COUNT(*) AS CANCELED_COUNT
+FROM [dbo].[ProjectCustomerData]
+WHERE CANCELED = 1
+GROUP BY REGION
+ORDER BY CANCELED_COUNT DESC
+```
+**Purpose**: Identify regions with highest churn rates
+**Strategic Value**: Helps in targeting retention efforts geographically
+
+## 9. Subscription Status Overview
+```sql
+SELECT 
+    CASE
+        WHEN CANCELED = 1 THEN 'NONACTIVE'
+        ELSE 'ACTIVE'
+    END AS SUBSCRIPTIONCOUNT,
+    COUNT(*) AS SUBSTATUS
+FROM [dbo].[ProjectCustomerData]
+GROUP BY CANCELED
+```
+**Purpose**: Overall active vs. canceled subscription analysis
+**Business Metrics**: Key performance indicator for customer retention
+
+## Key SQL Techniques Used
+1. Aggregation Functions (COUNT, SUM, AVG)
+2. CASE Statements for conditional logic
+3. DATEDIFF for time-based calculations
+4. GROUP BY for data aggregation
+5. TOP clause for limiting results
+6. NULL handling with CASE statements
+7. Date manipulation functions
+
+## Technical Considerations
+- Proper handling of NULL values in SUBSCRIPTIONEND
+- Use of DATEDIFF for accurate duration calculations
+- Consistent use of WHERE clauses for filtering
+- Proper grouping for aggregation analysis
+
+## Business Impact
+1. Customer Segmentation Insights
+2. Churn Analysis Capabilities
+3. Revenue Pattern Recognition
+4. Geographic Performance Metrics
+5. Subscription Type Effectiveness
