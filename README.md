@@ -440,7 +440,35 @@ WHERE SALES_REVENUE = 0
 - This query identifies any products that have not generated any sales revenue.
 - Analyzing the reasons behind the lack of sales for these products can help inform product optimization, discontinuation, or targeted marketing strategies.
 
-## Summary of the Customer Data Set
+  ## Sales Data Analysis- Power BI
+
+### 1. Overall Sales Performance
+- Total Sales: $11M
+- Total Quantity Sold: 345,000 units
+
+### 2. Sales by Region
+- The sales are evenly distributed across the four regions (East, North, South, West), with each region contributing around 2M in sales.
+
+### 3. Top Performing Subscription Types
+- Basic subscriptions generate the highest revenue at $75M, followed by Premium at $38M and Standard at $37M.
+
+### 4. Average Revenue by Year
+- The average quarterly revenue has remained relatively stable over the past 2 years, ranging from $1.99M to $2.01M.
+
+### 5. Subscription Status
+- There are 41,250 active (FALSE) subscriptions and 33,750 canceled (TRUE) subscriptions.
+
+### 6. Sales by Product and Quarter
+- Shoes are the highest selling product, contributing the most to the overall sales.
+- Sales trends show a seasonal pattern, with Q1 and Q3 typically being the strongest quarters.
+
+### 7. Sales by Subscription Type and Region
+- The regional distribution of subscription types is relatively balanced, with each region having a similar mix of Basic, Premium, and Standard subscriptions.
+
+
+<img width="611" alt="sales data Power bi" src="https://github.com/user-attachments/assets/5a927ae7-1de3-448a-ae3a-ec749a2b8497">
+
+## Summary of the Data Set
 
 The comprehensive analysis of the customer subscription and sales data provides a detailed understanding of LITA's business performance and customer dynamics.
 
